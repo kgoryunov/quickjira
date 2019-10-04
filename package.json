@@ -1,52 +1,16 @@
 {
-	"name": "quickjira",
-	"version": "0.11.2",
-	"private": true,
-	"description": "WebExtension for Chrome, Firefox, Edge and Opera to quickly open JIRA with the corresponding ticket",
-	"scripts": {
-		"prebuild": "rm -rf dist",
-		"build": "tsc",
-		"postbuild": "rsync -av --exclude='js' src/ dist",
-		"tslint": "tslint -p tsconfig.json '{src,test}/**/*.ts'",
-		"stylelint": "stylelint --allow-empty-input 'src/**/*.css'",
-		"lint": "npm run tslint && npm run stylelint",
-		"prerelease": "npm run test && npm run build",
-		"release": "standard-version",
-		"pretest": "npm run lint",
-		"test": "echo soon!"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/timbru31/quickjira.git"
-	},
-	"author": "Tim Brust <github@timbrust.de>",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/timbru31/quickjira/issues"
-	},
-	"homepage": "https://github.com/timbru31/quickjira#readme",
-	"devDependencies": {
-		"@types/chrome": "^0.0.89",
-		"addons-linter": "^1.14.2",
-		"husky": "^3.0.8",
-		"lint-staged": "^9.4.1",
-		"prettier": "^1.18.2",
-		"standard-version": "^7.0.0",
-		"stylelint": "^11.0.0",
-		"stylelint-config-recommended": "^3.0.0",
-		"tslint": "^5.20.0",
-		"tslint-config-prettier": "^1.18.0",
-		"typescript": "^3.6.3"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*.{ts,json,css,md,yml}": [
-			"prettier --write",
-			"git add"
-		]
-	}
+  "name": "quickjira",
+  "version": "0.11.2",
+  "private": true,
+  "description": "WebExtension for Chrome to quickly open JIRA with the corresponding ticket",
+  "repository": {
+    "type": "git",
+    "url": "kgoryunov/quickjira"
+  },
+  "author": "Kostya Goryunov <kostya.goryunov@kandasoft.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.89",
+    "prettier": "^1.18.2"
+  }
 }
